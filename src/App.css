@@ -1,0 +1,146 @@
+@import "tailwindcss";
+#root {
+  /* max-width: 1280px; */
+  min-height: 100vh;
+}
+
+.gray-text {
+  color: #373737;
+}
+
+.blue-text {
+  color: #8ab6d6;
+}
+
+.purple-text {
+  color: #4817c0;
+}
+
+.light-blue-border {
+  border-color: #f0f2ff;
+  border-width: 4px;
+}
+
+.bg-light-blue {
+  background-color: #f0f2ff;
+}
+
+.bg-blue {
+  background-color: #8ab6d6;
+}
+
+.bg-purple {
+  background-color: #6551ac;
+}
+
+.bg-green {
+  background-color: #a1ce3f;
+}
+
+.flicker-animation {
+  animation: flicker 8s ease-in-out infinite;
+}
+
+.flicker-animation-delay {
+  animation-delay: 4s;
+}
+
+.phone-img {
+  height: 400px;
+}
+
+.side-bar {
+  /* min-width: 200px;
+  max-width: 2/5; */
+  background-color: white;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  /* position: fixed; */
+}
+
+.animate-spin-smooth {
+  animation: spin-smooth 20s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.fade-in-animation.in-view {
+  animation: fade-in 1s ease-in-out;
+}
+
+.fade-in-animation-delay.in-view {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.fade-right-animation.in-view {
+  animation: fade-right 1s ease-in-out;
+}
+
+.fade-left-animation.in-view {
+  animation: fade-left 1s ease-in-out;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin-smooth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
