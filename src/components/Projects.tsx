@@ -26,7 +26,7 @@ const Projects = () => {
               src={oneskyPhone}
             />
           </div>
-          <div className="p-4 w-3/5">
+          <div className="p-4 w-3/5 overflow-auto">
             <p className="text-[30px] font-semibold group-hover:text-gray-100">
               Frontend Developer
             </p>
@@ -34,9 +34,7 @@ const Projects = () => {
               Working at One Sky Collective has given me hands-on experience
               collaborating within a large, cross-functional team. Our
               development team consists of about 10 engineers, while the UX/UI
-              team includes 7 designers. We rely on tools like GitHub, Slack,
-              and Jira to stay aligned, communicate efficiently, and move
-              collectively toward our founder’s vision.
+              team includes 7 designers.
             </p>
           </div>
         </div>
