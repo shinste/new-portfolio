@@ -6,12 +6,6 @@ import onesky from "../assets/images/onesky.webp";
 import { useEffect, useState } from "react";
 
 const CurrentRole = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setMounted(true), 50);
-    return () => clearTimeout(timer);
-  }, []);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const hash = window.location.hash;
