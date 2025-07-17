@@ -3,7 +3,7 @@ import homepage from "../assets/images/homepage.png";
 import quiz from "../assets/images/quiz.png";
 import refill from "../assets/images/refill.png";
 import onesky from "../assets/images/onesky.webp";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const CurrentRole = () => {
   useEffect(() => {
