@@ -1,9 +1,22 @@
 import Carousel from "./TechDisplay";
 import arrow from "../assets/images/arrow.png";
+import { useEffect, useState } from "react";
 
 const Introduction = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className=" font-semibold animate fade-in-animation-delay">
+    <div
+      className={`font-semibold animate ${
+        mounted ? "fade-in-animation-delay in-view" : "not-mounted"
+      }`}
+    >
+      {/* <div className="font-semibold animate"> */}
       <h2 className="text-[64px] w-4/5 leading-tight font-mono">
         Crafting Fluid <span className="blue-text">User Experiences</span>
       </h2>
@@ -15,10 +28,6 @@ const Introduction = () => {
         Specializing in leading tools, always ready to learn the next{" "}
       </p>
       <Carousel />
-      {/* <div className="flex"> */}
-      {/* <button className=" px-[3%]">
-          <p className="text-[20px]">Contact Me</p>
-        </button> */}
       <div
         className="cursor-pointer flex group"
         onClick={() => {
@@ -34,8 +43,6 @@ const Introduction = () => {
           alt="arrow"
         />
       </div>
-
-      {/* </div> */}
     </div>
   );
 };

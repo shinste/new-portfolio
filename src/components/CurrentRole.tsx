@@ -3,9 +3,15 @@ import homepage from "../assets/images/homepage.png";
 import quiz from "../assets/images/quiz.png";
 import refill from "../assets/images/refill.png";
 import onesky from "../assets/images/onesky.webp";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const CurrentRole = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const hash = window.location.hash;
@@ -23,7 +29,7 @@ const CurrentRole = () => {
         Current <span className="blue-text">Project/Position</span>
       </h2>
       <div className="flex w-4/5 items-center">
-        <div className="animate fade-in-animation">
+        <div className="animate fade-in-animatio">
           <h3 className="text-[32px] font-semibold">Frontend Developer</h3>
           <h4 className="text-[20px] mt-2">One Sky Collective</h4>
           <p className="gray-text my-10 w-3/4">

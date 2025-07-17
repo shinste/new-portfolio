@@ -3,11 +3,23 @@ import linkedIn from "../assets/images/linkedIn.png";
 import mail from "../assets/images/email.png";
 import github from "../assets/images/github.png";
 import useIntersectionAnimation from "../hooks/useIntersectionAnimation";
+import { useEffect, useState } from "react";
 
 const SideBar = () => {
   useIntersectionAnimation();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="w-2/5 animate fade-in-animation">
+    <div
+      className={`w-2/5 animate ${
+        mounted ? "fade-in-animation in-view" : "not-mounted"
+      } `}
+    >
       <div className="font-mono top-20 lg:mt-5 sticky min-w-[200px] w-2/5 side-bar rounded-[10px] light-blue-border px-8 py-5">
         <img
           src={Stephen}

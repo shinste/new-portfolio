@@ -71,8 +71,19 @@
   animation: fade-in 1s ease-in-out;
 }
 
-.fade-in-animation-delay.in-view {
+/* .fade-in-animation-delay.in-view {
   animation: fade-in 1.5s ease-in-out;
+} */
+
+.fade-in-animation-delay.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.not-mounted {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
 .fade-right-animation.in-view {
