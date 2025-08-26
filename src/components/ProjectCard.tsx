@@ -48,14 +48,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               : "Live Project"}
           </a>
         )}
-        <button
+        {/* Adding this part with a popup soon */}
+        {/* <button
           className={`bg-[#FFFFFF] py-2 ${
             projectInfo.link ? "w-[48%]" : "w-[100%]"
           } border-1 border-gray-200 shadow-sm hover:bg-[#F3F4F6]`}
           title="Coming 08/27/2025"
         >
           View Details
-        </button>
+        </button> */}
       </div>
     </div>
   );
