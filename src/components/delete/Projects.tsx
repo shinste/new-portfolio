@@ -20,13 +20,13 @@ const Projects = () => {
           }}
           className="bg-blue rounded-[12px] animate fade-in-animation-delay hover:text-gray-100 group max-h-[330px] flex cursor-pointer"
         >
-          <div className=" overflow-hidden rounded-l-[12px] p-5 self-center bg-purple h-full w-fit">
+          <div className="overflow-hidden rounded-l-[12px] p-[4%] self-center bg-purple h-full w-[40%]">
             <img
               className="h-[250px] w-auto transition-transform duration-500 ease-out group-hover:scale-105"
               src={oneskyPhone}
             />
           </div>
-          <div className="p-4 w-3/5 overflow-auto">
+          <div className="p-4 pr-4 w-fit overflow-x-hidden">
             <p className="text-[30px] font-semibold group-hover:text-gray-100">
               Frontend Developer
             </p>

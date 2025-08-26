@@ -1,6 +1,16 @@
 @import "tailwindcss";
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px; /* Fully rounded */
+  border: 2px solid transparent; /* Optional: adds spacing inside */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 #root {
-  /* max-width: 1280px; */
   min-height: 100vh;
 }
 
@@ -71,6 +81,12 @@
   animation: fade-in 1s ease-in-out;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 /* .fade-in-animation-delay.in-view {
   animation: fade-in 1.5s ease-in-out;
 } */
@@ -124,7 +140,7 @@
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -153,5 +169,30 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-around {
+  animation: hero-spin 30s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box; /* makes the center of the SVG work as origin */
+  will-change: transform; /* smoother GPU animation */
+}
+
+@keyframes hero-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
