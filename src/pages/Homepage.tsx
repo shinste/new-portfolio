@@ -27,7 +27,7 @@ const HomePage = () => {
           <button className="px-6 py-2 rounded-[20px] mt-6 border-1 border-white hover:bg-[#38BDF8] bg-transparent">
             <a href="/resume.pdf" target="_blank">
               <p className="text-white text-[20px] font-semibold">
-                Download Resume
+                View Resume
               </p>
             </a>
           </button>

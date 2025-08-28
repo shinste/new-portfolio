@@ -85,6 +85,11 @@ export const PROJECT_INFO: Record<
     tech: string[];
     details?: string;
     link?: string;
+    problemStatement: string;
+    myRole: string;
+    keyFeatures: string[];
+    biggestChallenges: string;
+    outcome: string;
   }
 > = {
   [Project.Environmental]: {
@@ -94,6 +99,19 @@ export const PROJECT_INFO: Record<
     picture: environmentalApp,
     link: "https://oneskycollective.org/",
     tech: ["React Native", "Redux", "Node.js"],
+    problemStatement:
+      "Users need a fun and engaging way to reduce their carbon footprint.",
+    myRole: "Lead Frontend Developer",
+    keyFeatures: [
+      "Points awarded for activities such as completing quizzes, logging water refills, taking eco-friendly travel methods",
+      "Challenges to encourage users to adopt sustainable habits",
+      "Social sharing to promote eco-friendly activities",
+      "E-commerce integration to purchase eco-friendly products using points",
+    ],
+    biggestChallenges:
+      "Learning React Native from scratch and implementing complex state management with Redux.",
+    outcome:
+      "Planning MVP launch in late 2025 with thousands of users being referred by environmental partners. Learning to lead a frontend team and manage project timelines effectively.",
   },
   [Project.Pacific]: {
     projectName: "Company Website",
@@ -102,6 +120,20 @@ export const PROJECT_INFO: Record<
     picture: pacificScreen,
     link: "https://dentistryintacoma.com/",
     tech: ["Next.js", "TypeScript", "React"],
+    problemStatement:
+      "A dental practice needed a modern, SEO-optimized website to increase patient acquisition and improve online presence in a competitive market.",
+    myRole: "Web Developer",
+    keyFeatures: [
+      "Server-side rendering (SSR) and static site generation (SSG) for optimal performance and SEO",
+      "Dynamic Google Reviews integration with real-time API fetching",
+      "Interactive Google Maps integration with custom markers and practice information",
+      "Responsive contact form with email validation and spam protection",
+      "JSON-LD structured data implementation for enhanced search visibility",
+    ],
+    biggestChallenges:
+      "Implementing complex SEO optimizations while maintaining fast load times, and integrating multiple third-party APIs (Google Reviews, Maps) with proper error handling and fallbacks.",
+    outcome:
+      "Delivered a high-performance website that increased monthly contact form submissions by 58% and improved Google PageSpeed scores to 95+. Site now ranks on first page for local dental searches.",
   },
   [Project.Spotify]: {
     projectName: "Spotify Recommender",
@@ -109,6 +141,19 @@ export const PROJECT_INFO: Record<
       "A web application that personalized music recommendations based on given song and artist preferences.",
     picture: spotifyScreen,
     tech: ["React", "TypeScript", "Spotify API"],
+    problemStatement:
+      "Music discovery on streaming platforms can be overwhelming and generic. Users needed a more personalized way to find new music based on their specific taste preferences.",
+    myRole: "Developer",
+    keyFeatures: [
+      "OAuth 2.0 authentication flow with Spotify for secure user access",
+      "Real-time search functionality with debounced API calls for performance",
+      "Interactive playlist creation and management with drag-and-drop interface",
+      "Audio preview integration with custom media player controls",
+    ],
+    biggestChallenges:
+      "Managing complex OAuth authentication flows, handling rate-limited API calls efficiently, and creating a smooth user experience with asynchronous data fetching and error handling.",
+    outcome:
+      "Built a fully functional music recommendation system that processes user preferences and generates personalized playlists. Discovered debouncing techniques to optimize API usage and enhance performance.",
   },
   [Project.Event]: {
     projectName: "Event Planning Application",
@@ -116,6 +161,20 @@ export const PROJECT_INFO: Record<
       "An application that allows users to plan and manage events, including guest lists, budgets, and schedules.",
     picture: collapScreen,
     tech: ["REST APIs", "Django", "PostGreSQL"],
+    problemStatement:
+      "Event organizers struggled with fragmented tools for managing different aspects of events, leading to inefficient planning and poor coordination among team members.",
+    myRole: "Full-Stack Developer",
+    keyFeatures: [
+      "Comprehensive event dashboard with real-time updates and notifications",
+      "Dynamic budget calculator with expense categorization and cost tracking",
+      "Interactive scheduling system with conflict detection and time zone support",
+      "Role-based access control for team collaboration and permission management",
+      "RESTful API architecture with comprehensive documentation and testing",
+    ],
+    biggestChallenges:
+      "Designing a scalable database schema to handle complex relationships between events, users, and resources, while ensuring data consistency and implementing efficient query optimization for large datasets.",
+    outcome:
+      "Developed a comprehensive full stack event management platform that streamlined planning workflows. Exposure to backend development and database design principles.",
   },
   [Project.Travel]: {
     projectName: "Travel Event Application",
@@ -123,6 +182,18 @@ export const PROJECT_INFO: Record<
       "A platform for organizing group travel events, enabling users to coordinate itineraries, accommodations, and activities.",
     picture: travellerScreen,
     tech: ["React", "TypeScript", "TailwindCSS"],
+    problemStatement:
+      "Group travel coordination was chaotic with scattered communication across multiple platforms, leading to confusion, missed bookings, and frustrated travelers.",
+    myRole: "Developer",
+    keyFeatures: [
+      "Collaborative itinerary builder with real-time synchronization across all group members",
+      "Time and date recommendation engine based on group preferences and location data",
+      "OAuth google authentication for secure and seamless user access",
+    ],
+    biggestChallenges:
+      "Implementing real-time collaboration features with conflict resolution, managing complex state synchronization across multiple users, and ensuring optimal performance with large datasets and map integrations.",
+    outcome:
+      "Created an intuitive travel coordination platform that advanced my skills in React and TypeScript.",
   },
 };
 

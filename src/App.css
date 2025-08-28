@@ -184,8 +184,8 @@
 .rotate-around {
   animation: hero-spin 30s linear infinite;
   transform-origin: center;
-  transform-box: fill-box; /* makes the center of the SVG work as origin */
-  will-change: transform; /* smoother GPU animation */
+  transform-box: fill-box;
+  will-change: transform;
 }
 
 @keyframes hero-spin {
